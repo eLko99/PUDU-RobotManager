@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <RootNamespace>PuduRobotManager</RootNamespace>
+    <AssemblyName>PuduRobotManager</AssemblyName>
+    <Product>PUDU Robot Manager</Product>
+    <Description>Manage ADB connections and remote desktop sessions for PUDU industrial robots.</Description>
+    <ApplicationTitle>PUDU Robot Manager</ApplicationTitle>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\scrcpy\**\*" CopyToOutputDirectory="PreserveNewest" Link="scrcpy\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+</Project>
